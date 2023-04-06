@@ -11,7 +11,7 @@ const NavBar = () => {
   return (
     <nav className="relative mx-auto container p-6">
       {/* flex container */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between ">
         <div className="pt-2">
           <img src={Logo} alt="" />
         </div>
@@ -30,7 +30,14 @@ const NavBar = () => {
           Get Started
         </button>
 
-        <button className={menu? 'open block hamburger md:hidden': 'block hamburger md:hidden'} onClick={handleMenu}>
+        <button
+          className={
+            menu
+              ? "open block hamburger md:hidden -mt-4"
+              : "block hamburger md:hidden -mt-4"
+          }
+          onClick={handleMenu}
+        >
           <span className="hamburger-top"></span>
           <span className="hamburger-middle"></span>
           <span className="hamburger-bottom"></span>
@@ -42,17 +49,15 @@ const NavBar = () => {
       <div className="md:hidden">
         <div
           id="menu"
-          className={`absolute ${menu? 'flex' : 'hidden'} flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md `}
+          className={`absolute ${
+            menu ? "flex" : "hidden"
+          } flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md `}
         >
           <a className="hover:text-darkGrayishBlue cursor-pointer">Pricing</a>
           <a className="hover:text-darkGrayishBlue cursor-pointer">Product</a>
-          <a className="hover:text-darkGrayishBlue cursor-pointer">
-            About Us
-          </a>
+          <a className="hover:text-darkGrayishBlue cursor-pointer">About Us</a>
           <a className="hover:text-darkGrayishBlue cursor-pointer">Careers</a>
-          <a className="hover:text-darkGrayishBlue cursor-pointer">
-            Community
-          </a>
+          <a className="hover:text-darkGrayishBlue cursor-pointer">Community</a>
         </div>
       </div>
     </nav>

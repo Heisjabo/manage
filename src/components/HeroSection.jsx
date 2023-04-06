@@ -1,4 +1,4 @@
-import Illustration from "../assets/images/Illustration-intro.svg"
+import Illustration from "../assets/images/illustration-intro.svg"
 
 const HeroSection = () => {
   return (
